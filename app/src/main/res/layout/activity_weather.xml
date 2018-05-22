@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
     <ScrollView
-        android:id="@+id/weather"
+        android:id="@+id/weather_layout"
         android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

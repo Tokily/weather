@@ -6,5 +6,5 @@ public class Aqi {
         public String aqi;
         public String pm25;
     }
-    public Aqi city;
+    public AqiCity city;
 }

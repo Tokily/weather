@@ -3,10 +3,10 @@ package com.activitytest.weather;
 import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -74,6 +74,11 @@ public class ChooseAreaFragment extends Fragment{
                 }else if(currentLevel==LIVE_CITY){
                     currentCity=cityList.get(i);
                     queryCounties();
+                }else if(currentLevel==LIVE_COUNTY){
+                    String weatherId=countyList.get(i).getWeatherId();
+                    Intent intent=new Intent(getActivity(),WeatherActivity.class);
+                    startActivity(intent);
+                    getActivity().finish();
                 }
             }
         });
