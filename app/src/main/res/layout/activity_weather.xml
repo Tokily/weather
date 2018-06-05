@@ -4,6 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
+    <ImageView
+        android:id="@+id/bgImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/selectCity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <ScrollView
         android:id="@+id/weather_layout"
         android:scrollbars="none"
@@ -11,6 +24,7 @@
         android:layout_height="match_parent"
         android:overScrollMode="never">
         <LinearLayout
+            android:fitsSystemWindows="true"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -21,4 +35,12 @@
             <include layout="@layout/suggestion"/>
         </LinearLayout>
     </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+        <fragment
+            android:id="@+id/showCityList"
+            android:name="com.activitytest.weather.ChooseAreaFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"/>
+    </android.support.v4.widget.DrawerLayout>
 </FrameLayout>
